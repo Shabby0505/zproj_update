@@ -1,0 +1,41 @@
+<mvc:View controllerName="com.snet.proj.zprojmassupdate.controller.View1"
+     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"	
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+    >
+    <Page id="page" title="{i18n>title}" icon="">
+        <content >
+    <VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormChangeColumn_twoGroups234"
+			editable="true"
+			layout="ColumnLayout"
+			title=""
+			columnsM="2"
+			columnsL="3"
+			columnsXL="4"
+			>
+			<f:content>
+				<core:Title text="" />
+					<Label text="{i18n>projectCode}" />
+					<Input id="idProjectCode" value="" liveChange="onChangeOfProject" maxLength="24"/>
+				
+				<core:Title text="" />
+					<Label text="{i18n>custDueDate}" labelFor="DP2"/>
+			
+              		<DatePicker id = "idDueDate" displayFormat="MM/dd/yyyy" valueFormat="yyyyMMdd" change="onDateChange"/>	
+			</f:content>
+		</f:SimpleForm>
+       
+	</VBox>
+	
+        </content>
+		 <footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button text="{i18n>btnUpdate}" press="onUpdate" width="13rem" type="Emphasized" enabled="true"></Button>
+			</OverflowToolbar>
+		</footer>
+    </Page>
+</mvc:View>
